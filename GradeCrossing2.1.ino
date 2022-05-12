@@ -8,6 +8,9 @@
 //
 // *************************************************************************
 // Revision history:
+//   2022/05/08 N. Allison 2.1 Added ServoSpeedDown value 5 for downward gate movement
+//                             Added ServoSpeedUp value 55 for upward gate movement
+//                             Added Armtip to Xingdef Value of 5 for light on tip of arm
 //   2022/04/30 J. Schmidt 2.0 Update gate & servo processing
 //                             Optionally use VarSpeedServo
 //                             fixed TimeOutSecs starts after WaitABitSecs
@@ -638,6 +641,7 @@ void StartLites (){
     #endif
   if (Crossing[Xidx].FirstLite > 0) {
       digitalWrite(Crossing[Xidx].ArmTip,   LampOn); 
+      //2.1
       digitalWrite(Crossing[Xidx].FirstLite,   LampOn);
       digitalWrite(Crossing[Xidx].FirstLite+1, LampOff);
   } // if FirstLite is defined
